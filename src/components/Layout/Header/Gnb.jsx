@@ -27,7 +27,14 @@ const Gnb = () => {
       <div className="gnb">
         <ul>
           <li>
-            <Link to="/Explore">Explore</Link>
+            <Link to="/Create" className="create-position">
+              Create
+            </Link>
+          </li>
+          <li>
+            <Link to="/Explore" className="explore-position">
+              Explore
+            </Link>
           </li>
           <li>
             <Link to="/Shell">Shell</Link>
@@ -36,6 +43,44 @@ const Gnb = () => {
             <Link to="/Drops">Drops</Link>
           </li>
         </ul>
+        <div className="gnb-depth">
+          <div className="depth-wrap">
+            <div className="depth-inner">
+              <div className="gnb-left">
+                <ul>
+                  <li>
+                    <Link to="/">Collections</Link>
+                  </li>
+                  <li>
+                    <Link to="/">NFTs</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Users</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Marketplace</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="gnb-right">
+                <ul>
+                  <li>
+                    <Link to="/">Ethereum</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Polygon</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Tezos</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Immutable</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Nav>
   );
@@ -97,7 +142,8 @@ const Nav = styled.div`
     }
   }
   .gnb {
-    ul {
+    position: relative;
+    > ul {
       display: flex;
       li {
         margin-right: 24px;
@@ -105,6 +151,42 @@ const Nav = styled.div`
           font-size: 15px;
           font-weight: bold;
           color: rgba(255, 255, 255, 0.6);
+          transition: all 0.3s;
+          &:hover {
+            color: rgba(255, 255, 255, 0.9);
+          }
+        }
+      }
+    }
+    .gnb-depth {
+      position: absolute;
+      top: 52px;
+      left: 75px;
+      .depth-inner {
+        display: flex;
+        ul {
+          li {
+            a {
+              width: 240px;
+              padding: 14px;
+              line-height: 22px;
+              display: block;
+            }
+          }
+        }
+        .gnb-left {
+          width: 240px;
+        }
+        .gnb-right {
+          ul {
+            width: 500px;
+            display: flex;
+            flex-direction: row;
+    flex-wrap: wrap;
+            li {
+              max-width: 240px;
+            }
+          }
         }
       }
     }

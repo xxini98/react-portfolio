@@ -20,11 +20,11 @@ const theme = extendTheme({
         height: "100%",
       },
       body: {
-        bg: "white",
-        fontFamily: "Poppins",
+        bg: "#191c1f",
+        fontFamily: "Inter",
         fontSize: "16px",
         fontWeight: "400",
-        color: "#2B3674",
+        color: "#fff",
       },
       // styles for the `a`
       a: {

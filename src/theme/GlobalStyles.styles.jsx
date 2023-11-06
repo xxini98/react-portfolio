@@ -59,7 +59,7 @@ const GlobalStyles = createGlobalStyle`
     /* 기본 폰트 설정 */
     body, html {
         line-height: 1.5;
-        font-family: "Poppins", "Malgun Gothic", "맑은 고딕", sans-serif;
+        font-family: "Inter" "Poppins", "Malgun Gothic", "맑은 고딕", sans-serif;
         font-weight: 400;
         color: #333;
       }
